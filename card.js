@@ -5,6 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const modal = document.getElementById("modal");
     const closeModal = document.querySelector(".close");
     const confirmGenerate = document.getElementById("confirm-generate");
+    const url ="https://thesimpsonsquoteapi.glitch.me/quotes";
+
+    //funcion para consultar api
+    function getCharacter(){
+        fetch(url);
+        
+    }
 
     // Función para crear una card
     function createCard(characterName) {
@@ -47,7 +54,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Evento para confirmar la generación de varias cards
     confirmGenerate.addEventListener("click", () => {
         const quantity = document.getElementById("card-quantity").value;
-        const characterName = document.getElementById("input-character").value;
+        //const characterName = document.getElementById("input-character").value;
 
         if (quantity && characterName) {
             for (let i = 0; i < quantity; i++) {
